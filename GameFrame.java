@@ -2,8 +2,9 @@ import javax.swing.JFrame;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+
 public class GameFrame extends JFrame {
-    public GameFrame(GameCanvas canvas, player p) {
+    public GameFrame(GameCanvas canvas, Player p) {
         this.setTitle("CSCI 22 Final: Nature Tron");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.add(canvas);

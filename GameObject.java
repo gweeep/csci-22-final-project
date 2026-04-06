@@ -1,7 +1,7 @@
 import java.awt.*;
+import java.io.Serializable;
 
-// Abstract class for all game entities 
-public abstract class GameObject {
+public abstract class GameObject implements Serializable {
     protected int x, y;
     protected Color color;
 
