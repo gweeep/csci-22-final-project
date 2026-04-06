@@ -1,15 +1,14 @@
-/**
- * GameStarter is the entry point for the player-side of the game.
- * Run this class on each player's machine after the GameServer is running.
- */
-public class GameStarter {
+import java.awt.Color;
+import javax.swing.SwingUtilities;
 
-    /**
-     * Creates and starts a Player instance, connecting it to the game server.
-     */
+public class GameStarter {
     public static void main(String[] args) {
-        Player player = new Player(1024, 768);
-        player.connectToServer();
-        player.setUpGUI();
+        SwingUtilities.invokeLater(() -> {
+            player p1 = new player(100, 384, Color.GREEN);
+            player p2 = new player(900, 384, Color.RED);
+            GameCanvas canvas = new GameCanvas(p1, p2);
+            GameFrame frame = new GameFrame(canvas, p1);
+            frame.setVisible(true);
+        });
     }
 }
